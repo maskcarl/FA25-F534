@@ -8,7 +8,7 @@ Created on Sun Nov  2 10:19:53 2025
 %reset -f
 %clear
 
-# Reading from a CSV File 
+# Reading from a CSV File #loading pandas into memory
 import pandas as pd
 
 train = pd.read_csv('train.csv')
@@ -37,6 +37,7 @@ polynomial_function = np.poly1d(coefficients)
 y_predicted = polynomial_function(train.Age)
 
 # Plot the original train data and the fitted polynomial
+#Run plt as a group and not individual lines
 plt.scatter(train.Age, train.Salary, label='Original Data')
 plt.scatter(train.Age, y_predicted, color='red', label='5th Degree Polynomial Fit')
 plt.xlabel('Age')
