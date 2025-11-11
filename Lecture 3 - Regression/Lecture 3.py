@@ -8,13 +8,31 @@ Created on Sun Nov  2 10:19:53 2025
 %reset -f
 %clear
 
+<<<<<<< HEAD
 # Reading from a CSV File #loading pandas into memory
+=======
+import os
+
+# Assume current working directory is /home/user/project
+print(f"Initial CWD: {os.getcwd()}")
+
+# Change to a subdirectory named 'data'
+os.chdir("Lecture 3 - Regression")
+print(f"CWD after entering 'data': {os.getcwd()}")
+
+# Reading from a CSV File 
+>>>>>>> datatroy/main
 import pandas as pd
 
 train = pd.read_csv('train.csv')
 validate = pd.read_csv('validate.csv')
 test = pd.read_csv('test.csv')
 
+# Change back to FA25-F534 directory
+os.chdir("..")
+print(f"CWD after entering 'data': {os.getcwd()}")
+
+# Simple plot of train using Pandas DataFrame .plot method
 axes = train.plot(x='Age', y='Salary',
                xlim=[20, 70], ylim=[0, 350000], 
                style='.')
