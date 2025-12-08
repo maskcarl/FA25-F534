@@ -35,13 +35,4 @@ test_df = test_df.drop(val_df.index)
 
 # Verification: The sum of lengths should equal the original length, 
 # and the indices should be mutually exclusive.
-assert len(train_df) + len(test_df) + len(val_df) == len(df)
-# Change to a subdirectory
-os.chdir("Logistic Regression")
-
-# sampled_df.to_csv('LC_20.csv')
-compression_opts = dict(method='zip', archive_name='LC_20.csv')
-sampled_df.to_csv('LC_20.zip', index=False, compression=compression_opts)
-
-# Change back to FA25-F534 directory
-os.chdir("..")  
+# assert len(train_df) + len(test_df) + len(val_df) == len(df)
